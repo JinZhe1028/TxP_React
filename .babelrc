@@ -1,0 +1,10 @@
+{
+  "presets": ["react-native-stage-0/decorator-support"],
+  "plugins": [
+    "syntax-flow",
+    "transform-flow-strip-types",
+    "babel-plugin-root-import",
+    "syntax-async-functions",
+    "transform-regenerator"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "VxP",
+  "short_name": "VxP",
+  "icons": [
+    {
+      "src": "",
+      "sizes": "72x72 96x96 128x128 256x256"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#FFFFFF",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "theme_color": "#018CCF"
+}

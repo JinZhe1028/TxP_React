@@ -1,0 +1,106 @@
+export default {
+  condition: ({ role }) => ['admin', 'manager', 'teamLead'].includes(role),
+  fields: [
+    {
+      title: 'Sales Rep',
+      field: 'userId',
+      placeholder: 'userId',
+      type: 'select',
+      format: 'number',
+      disabled: true,
+      options: {
+        title: 'name',
+        path: 'user',
+        field: 'id',
+        params: {
+          role: 'salesRep',
+        },
+      },
+    },
+    {
+      title: 'Buyer',
+      field: 'buyerId',
+      placeholder: 'buyerId',
+      type: 'select',
+      format: 'number',
+      disabled: true,
+      options: {
+        title: 'name',
+        path: 'buyer',
+        field: 'id',
+      },
+    },
+    {
+      title: 'Team Lead',
+      field: 'teamLeadId',
+      placeholder: 'teamLeadId',
+      type: 'select',
+      format: 'number',
+      disabled: true,
+      options: {
+        title: 'name',
+        path: 'user',
+        field: 'id',
+        params: {
+          role: 'teamLead',
+        },
+      },
+    },
+    {
+      title: 'Route',
+      field: 'routeId',
+      placeholder: 'routeId',
+      type: 'static',
+    },
+    {
+      title: 'Period',
+      field: 'period',
+      placeholder: 'Period',
+      type: 'static',
+    },
+    {
+      title: 'Trans Code',
+      field: 'transCode',
+      placeholder: 'transCode',
+      type: 'static',
+    },
+    {
+      title: 'CE',
+      field: 'ce',
+      placeholder: 'ce',
+      type: 'number',
+    },
+    {
+      title: 'GP',
+      field: 'gp',
+      placeholder: 'gp',
+      type: 'number',
+    },
+    {
+      title: 'Cost',
+      field: 'cost',
+      placeholder: 'cost',
+      type: 'number',
+    },
+    {
+      title: 'Cost Fpl',
+      field: 'costFpl',
+      placeholder: 'costFpl',
+      type: 'number',
+    },
+    {
+      condition: (props, user) => user.role === 'admin',
+      title: 'Wholesaler',
+      field: 'wholesalerId',
+      placeholder: 'wholesalerId',
+      type: 'select',
+      format: 'number',
+      disabled: true,
+      options: {
+        title: 'name',
+        path: 'wholesaler',
+        field: 'id',
+      },
+    },
+  ],
+};

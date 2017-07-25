@@ -1,0 +1,117 @@
+export default {
+  condition: () => false,
+  fields: [
+    {
+      title: 'Sales Rep',
+      field: 'salesRepId',
+      placeholder: 'salesRepId',
+      type: 'select',
+      format: 'number',
+      options: {
+        path: 'salesRep',
+        title: 'id',
+        field: 'id',
+      },
+    },
+    {
+      title: 'Team Lead',
+      field: 'teamLeadId',
+      placeholder: 'teamLeadId',
+      type: 'select',
+      format: 'number',
+      options: {
+        path: 'user',
+        title: 'name',
+        field: 'id',
+        params: {
+          role: 'teamLead',
+        },
+      },
+    },
+    {
+      title: 'Group',
+      field: 'groupId',
+      placeholder: 'groupId',
+      type: 'select',
+      format: 'number',
+      options: {
+        path: 'group',
+        title: 'id',
+        field: 'id',
+      },
+    },
+    {
+      title: 'Ce',
+      field: 'ce',
+      placeholder: 'Ce',
+      type: 'number',
+    },
+    {
+      title: 'Previous Ce',
+      field: 'previousCe',
+      placeholder: 'previousCe',
+      type: 'number',
+    },
+    {
+      title: 'Gp',
+      field: 'gp',
+      placeholder: 'Gp',
+      type: 'number',
+    },
+    {
+      title: 'Previous Gp',
+      field: 'previousGp',
+      placeholder: 'previousGp',
+      type: 'number',
+    },
+    {
+      title: 'Cost',
+      field: 'cost',
+      placeholder: 'Cost',
+      type: 'number',
+    },
+    {
+      title: 'Previous Cost',
+      field: 'previousCost',
+      placeholder: 'previousCost',
+      type: 'number',
+    },
+    {
+      title: 'Cost Fpl',
+      field: 'costFpl',
+      placeholder: 'Cost Fpl',
+      type: 'number',
+    },
+    {
+      title: 'Previous Cost Fpl',
+      field: 'previousCostFpl',
+      placeholder: 'previousCostFpl',
+      type: 'number',
+    },
+    {
+      title: 'Period',
+      field: 'period',
+      placeholder: 'Period',
+      type: 'date',
+    },
+    {
+      title: 'Previous Period',
+      field: 'previousperiod',
+      placeholder: 'previousperiod',
+      type: 'date',
+    },
+    {
+      title: 'Wholesaler',
+      field: 'wholesalerId',
+      placeholder: 'wholesaler',
+      type: 'select',
+      format: 'number',
+      condition: (props, user) => user.role === 'admin',
+      options: {
+        path: 'wholesaler',
+        title: 'name',
+        field: 'id',
+      },
+    },
+  ],
+};

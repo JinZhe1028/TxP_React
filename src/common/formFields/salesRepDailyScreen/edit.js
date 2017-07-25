@@ -1,0 +1,90 @@
+export default {
+  condition: ({ role }) => ['admin', 'manager', 'teamLead'].includes(role),
+  fields: [
+    {
+      title: 'Rank',
+      field: 'rank',
+      placeholder: 'rank',
+      type: 'static',
+    },
+    {
+      title: 'Previous Rank',
+      field: 'previousrank',
+      placeholder: 'previousrank',
+      type: 'static',
+    },
+    {
+      title: 'Sales Rep',
+      field: 'salesRepId',
+      placeholder: 'salesRepId',
+      type: 'static',
+    },
+    {
+      title: 'Team Lead',
+      field: 'teamLeadId',
+      placeholder: 'teamLeadId',
+      type: 'static',
+    },
+    {
+      title: 'Group',
+      field: 'groupId',
+      placeholder: 'groupId',
+      type: 'static',
+    },
+    {
+      title: 'Ce',
+      field: 'ce',
+      placeholder: 'Ce',
+      type: 'static',
+    },
+    {
+      title: 'Previous Ce',
+      field: 'previousCe',
+      placeholder: 'previousCe',
+      type: 'static',
+    },
+    {
+      title: 'Gp',
+      field: 'gp',
+      placeholder: 'Gp',
+      type: 'static',
+    },
+    {
+      title: 'Previous Gp',
+      field: 'previousGp',
+      placeholder: 'previousGp',
+      type: 'static',
+    },
+    {
+      title: 'Cost',
+      field: 'cost',
+      placeholder: 'Cost',
+      type: 'static',
+    },
+    {
+      title: 'Previous Cost',
+      field: 'previousCost',
+      placeholder: 'previousCost',
+      type: 'static',
+    },
+    {
+      title: 'Cost Fpl',
+      field: 'costFpl',
+      placeholder: 'Cost Fpl',
+      type: 'static',
+    },
+    {
+      title: 'Previous Cost Fpl',
+      field: 'previousCostFpl',
+      placeholder: 'previousCostFpl',
+      type: 'static',
+    },
+    {
+      title: 'Wholesaler',
+      field: 'wholesalerId',
+      placeholder: 'wholesaler',
+      type: 'static',
+      condition: (props, user) => user.role === 'admin',
+    },
+  ],
+};
